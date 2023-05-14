@@ -71,5 +71,97 @@ public:
 	
 
 };
+class Admin: public personInfo{
+protected:
+	string message;
+	string responce;
+	int sallary;
 
+public:
+	void setsallary(int sallary) {
+		this->sallary = sallary;
+	}
+	int getsallary() {
+		return sallary;
+	}
+
+	void setmessage(string message) {
+		this->message = message;
+	}
+	string getmessage() {
+		return message;
+	}
+
+	void setresponce(string responce) {
+		this->responce = responce;
+	}
+	string getresponce() {
+		return responce;
+	}
+	
+
+
+};
+
+
+class employee :public personInfo{
+	friend class Admin;
+
+protected:
+	string message;
+	string responce;
+	int sallary;
+
+public:
+static int count;
+	void setsallary(int sallary) {
+		this->sallary = sallary;
+	}
+	int getsallary() {
+		return sallary;
+	}
+
+    void setMessage(const string& message) {
+        this->message = message;
+    }
+
+	string getmessage() {
+		return message;
+	}
+
+	void setresponce(string responce) {
+		this->responce = responce;
+	}
+	string getresponce() {
+		return responce;
+	}
+
+
+};
+
+class customer : public personInfo{
+	int reviews;
+public:
+static int reviews_count;
+
+	void setreviews(int reviews){
+		this->reviews = reviews;
+		reviews_count++;
+	}
+	int getreviews(){
+		return reviews;
+	}
+};
+
+
+
+class menuCategory {
+protected:
+
+	string name;
+	string description;
+	string availablityInfo;               // weather its seasonal or ...
+	string allergenInfo;                // (e.g.gluten - free, vegetarian, contains nuts)
+	
+	int price;
 
