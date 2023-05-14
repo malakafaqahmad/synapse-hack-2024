@@ -34,3 +34,42 @@ int numDESSERT = 0;
 
 int TOTAL_ITEMS_AVAILABLE = 0;
 
+//declare functions here
+
+void Admin_loggedIN();
+void adminDisplay();
+void Admin_loggedIN();
+void setAdmin(enum Admins);
+void messageEmployee();
+void updateSallary();
+void setsallary();
+void updateInventory();
+void loginform();
+void _menu();
+void _breakfast();
+void _lunch();
+void _dinner();
+void _beavrages();
+void _dessert();
+
+void showCostumerRewview();
+//declare classes here
+class Admin;
+class employee;
+
+
+class personInfo {         //you can also declare it as a struct
+public:
+
+	string name;
+	string emailAddress;
+	string orderHistory;
+	string paymentInformation;
+	int phoneNumber;
+	char ratings;      //demonstrates his records or personal behaviours based on reviews
+
+	
+
+};
+
+
