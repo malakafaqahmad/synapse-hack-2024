@@ -271,4 +271,48 @@ public:
 };
 
 
+class beverage :public menuCategory {
+protected:
+public:
+	void getinformation() {
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl << endl;
+		cout << "------------------------- Beverage Menu ------------------------------" << endl;
+		cout << "the name of the item is " << name << endl;
+		cout << "the price of the item is " << price << endl;
+		cout << "some detailed descriptions about the item are " << description << endl << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+	}
+	
+
+};
+
+/// SOME BASIC DECLARATIONS///----------------------------------------------------------------////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+int customer::reviews_count = 0;
+int employee::count = 0;
+
+customer _customer[5];
+Admin _admin;
+employee employ[5];
+
+menuCategory* ptr[MAX_BREAKFAST];
+breakFast breakfastItem[MAX_BREAKFAST];
+
+// menuCategory* ptr[MAX_DESSERT];
+dessert dessertItem[MAX_DESSERT];
+
+// menuCategory* ptr[MAX_BEVERAGE];
+beverage beverageItem[MAX_BEVERAGE];
+
+// menuCategory* ptr[MAX_LUNCH];
+lunch lunchItem[MAX_LUNCH];
+
+// menuCategory* ptr[MAX_DINNER];
+dinner dinnerItem[MAX_DINNER];
+
+
 
