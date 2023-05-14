@@ -164,4 +164,40 @@ protected:
 	string allergenInfo;                // (e.g.gluten - free, vegetarian, contains nuts)
 	
 	int price;
+	public:
+	int quantity;
+
+	virtual void setName(string name) {
+		this->name = name;
+	}
+	virtual string getName() {
+		return name;
+	}
+
+	virtual void setprice(int price) {
+		this->price = price;
+	}
+	virtual int getprice() {
+		return price;
+	}
+
+	virtual void setDescription(string description) {
+		this->description = description;
+	}
+	virtual string getDescription() {
+		return description;
+	}
+
+	virtual void getinformation() {
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl << endl;
+		cout << "the name of the item is " << name << endl; 
+		cout << "the price of the item is " << price << endl;
+		cout << "some detailed descriptions about the item are " << description << endl << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+	}
+
+};
+
 
