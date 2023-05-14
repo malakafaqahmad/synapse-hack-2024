@@ -201,3 +201,74 @@ protected:
 };
 
 
+
+
+class breakFast :public menuCategory {
+protected:
+public:
+	void getinformation() {
+
+		cout << "------------------------- Breakfast Menu ------------------------------" << endl;
+		cout << "the name of the item is " << name << endl;
+		cout << "the price of the item is " << price << endl;
+		cout << "some detailed descriptions about the item are " << description << endl << endl;
+
+	}
+	
+	 
+
+};
+
+class lunch :public menuCategory {
+protected:
+public:
+	void getinformation() {
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl << endl;
+		cout << "------------------------- Lunch Menu ------------------------------" << endl;
+		cout << "the name of the item is " << name << endl;
+		cout << "the price of the item is " << price << endl;
+		cout << "some detailed descriptions about the item are " << description << endl << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+	}
+	
+
+};
+
+class dinner :public menuCategory {
+protected:
+public:
+	void getinformation() {
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl << endl;
+		cout << "------------------------- Dinner Menu ------------------------------" << endl;
+		cout << "the name of the item is " << name << endl;
+		cout << "the price of the item is " << price << endl;
+		cout << "some detailed descriptions about the item are " << description << endl << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+	}
+
+	
+
+};
+
+class dessert :public menuCategory {
+protected:
+public:
+	void getinformation() {
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl << endl;
+		cout << "------------------------- Dessert Menu ------------------------------" << endl;
+		cout << "the name of the item is " << name << endl;
+		cout << "the price of the item is " << price << endl;
+		cout << "some detailed descriptions about the item are " << description << endl << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+		cout << "-----------------------------------------------------------------------" << endl;
+	}
+	
+};
+
+
+
