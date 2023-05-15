@@ -945,3 +945,49 @@ void setAdmin(enum Admins loggedInAdmin_name) {
 }
 
 
+
+void Admin_loggedIN() {
+	int choice,password;
+	cout << "-----------------------------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------------------------------" << endl;
+	cout << "				identify yourself 1 for Afaq ,, 2 for rameesa" << endl;
+	cin >> choice;
+
+	switch (choice)
+	{
+	case 1:
+		cout << "	enter password " << endl;
+		cin >> password;
+		if (password==1234)
+		{ 
+			setAdmin(Afaq);
+		}
+		else {
+			cout << "Incorrect password" << endl;
+			Admin_loggedIN();
+		}
+		break;
+
+	case 2:	
+		cout << "	enter password " << endl;
+		cin >> password;
+		if (password == 5678)
+		{
+			setAdmin(Rameesa);
+		}
+		else {
+			cout << "Incorrect password" << endl;
+			Admin_loggedIN();
+		}
+		break;
+		
+	default:
+		//system("color 5");
+		cout << "your password or name selection is incorrect" << endl;
+		
+		Admin_loggedIN();	
+		break;
+	}
+}
+
+
