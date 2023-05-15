@@ -1103,5 +1103,131 @@ public:
             system("cls");
      }  while (ch == 'y' || ch == 'Y');   
    }
+         void showbill(){
+system("cls");
+
+
+cout<<"\n\t\tFINAL BILL\t\t\n";
+cout<<" Total orders are : "<<order;
+
+    if (n1 == 1)
+         {
+             if (n2 == 1)
+             {
+            
+                 cout << "\n\t\tChicken Behari Boti \t\t\n";
+             }
+             else if (n2 == 2)
+             {
+                
+                 cout << " \n\t\tChicken Malai Boti\t\t\n";
+             }
+             else
+             {
+            
+                 cout << "\n\t\tChicken Tikka\t\t\n";
+             }
+         }
+         else if (n1 == 2)
+         {
+             if (n2 == 1)
+             {
+                
+                 cout << "\n\t\tFinger Fish\t\t\n";
+             }
+             else
+             {
+                 
+                 cout << "\n\t\tGrilled Fish \t\t\n";
+             }
+         }
+         else 
+         {
+             if (n2 == 1)
+             {
+                 
+                 cout << "\n\t\tMango\t\t\n";
+            }
+             else
+             {
+
+                 
+                 cout << "\n\t\tStrawberry\t\t\n";
+                 
+             }
+          }//////////////////////////////////////
+        cout << name << " ordered   of total ampount " << total;
+
+}
+    };int menu::order=0;
+
+////mahnoor code
+const char *fileName = "Employee.txt";
+
+class Employee
+{
+private:
+    int EmpID;
+    char EmpName[50], Post[50], Department[10];
+    float Salary;
+
+public:
+    void ReadData();
+    int GetID();
+    void DisplayRecord();
+    char *GetDepartment();
+};
+class Schedule : public Employee
+{
+private:
+    string dayOfWeek, shift;
+
+public:
+    int setDayOfWeek(string dayOfWeek, string shift)
+    {
+        this->dayOfWeek = dayOfWeek;
+        this->shift = shift;
+    }
+    string getDayOfWeek()
+    {
+        cout << "Day of week: " << dayOfWeek << endl;
+        cout << "Shift: " << shift << endl;
+    }
+};
+
+void Employee::ReadData()
+{
+    cout << endl
+         << "Employee ID:";
+    cin >> EmpID;
+    cout << "Employee Name:";
+    cin >> EmpName;
+    cout << "Employee's Post:";
+    cin >> Post;
+    cout << "Employee's Department:";
+    cin >> Department;
+    cout << "Salary:";
+    cin >> Salary;
+}
+
+void Employee::DisplayRecord()
+{
+    cout << endl
+         << "_______________________________";
+    cout << endl
+         << setw(5) << EmpID << setw(15) << EmpName << setw(15) << Post << setw(15) << Department << setw(8) << Salary;
+}
+
+int Employee::GetID()
+{
+    return EmpID;
+}
+
+char *Employee::GetDepartment()
+{
+    return Department;
+}
+
+//////////////////////////////////////////////////////////
 
 
