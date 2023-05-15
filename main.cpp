@@ -593,3 +593,146 @@ void _dinner() {
 		cin >> s;
 		cin.ignore(); // ignore the newline character left in the input stream by cin
 	} while (s == 'y' || s == 'Y');
+	cout << "All the available dinner are: " << endl;
+	for (int i = 0; i < indexNumber; i++) {
+
+		cout << "item: " << indexNumber + 1 << endl;
+		ptr[i] = &dinnerItem[i];
+
+		ptr[i]->getinformation();
+
+
+
+	}
+
+
+}
+
+void _breakfast() {
+	char s;
+
+	
+
+	static int indexNumber = 0;
+	do {
+
+		string name, description;
+		int price;
+		
+		
+
+		cout << "Enter the name of the breakfast: ";
+		cin >> name;
+		cout << "Enter the price: ";
+		cin >> price;
+		cin.ignore(); // ignore the newline character left in the input stream by cin
+
+		cout << "Enter the description: ";
+		getline(cin, description);
+		
+		if (indexNumber < MAX_BREAKFAST)
+		{
+			ptr[indexNumber] = &breakfastItem[indexNumber];
+
+
+			ptr[indexNumber]->setName(name);
+			ptr[indexNumber]->setprice(price);
+			ptr[indexNumber]->setDescription(description);
+
+			indexNumber++;
+		}
+		else {
+			cout << "Max limit reached for breakfasts!!! " << endl;
+		}
+
+		
+
+	
+		cout << "Do you want to add more? (y/n) ";
+		cin >> s;
+		cin.ignore(); // ignore the newline character left in the input stream by cin
+	} while (s == 'y' || s =='Y');
+
+	for (int i = 0; i < indexNumber; i++) {
+
+		cout << "All the available breakfasts are: " << endl;
+		cout << "item: " << indexNumber + 1 << endl;
+
+		ptr[i] = &breakfastItem[i];
+
+		ptr[i]->getinformation();
+
+		
+		
+	}
+
+
+
+}
+
+
+void _menu() {
+	int choice;
+
+	cout << "choose an option here" << endl;
+	cout << "        ||  1_ add into breakfast menus" << endl;
+	cout << "        ||  2_ add into luch menu" << endl;
+	cout << "        ||  3_ add into dinner menu" << endl;
+	cout << "        ||  4_ add into dessert menu" << endl;
+	cout << "        ||  5_ add into beaverages" << endl;
+	cout << "        ||  6_ go back" << endl;
+	cout << "        ||  -1_ exit" << endl;
+
+	cout << "iafqahmad>>> ";
+	cin >> choice;
+
+	switch (choice)
+	{
+	case 1:
+		_breakfast();
+		break;
+
+	case 2:
+		_lunch();
+		break;
+
+	case 3:
+		_dinner();
+		break;
+
+	case 4:
+		_dessert();
+		break;
+
+	case 5:
+		_beavrages();
+		break;
+
+	case 6:
+		adminDisplay();
+		break;
+
+	case -1:
+		exit(0);
+		break;
+
+	default:
+		cout << "enter correct option";
+		break;
+	} 
+}
+
+
+void showCostumerRewview(){
+	// customer _costomer;
+	int x = customer::reviews_count;
+	cout << "----------------------------------------------------------------" << endl;
+	cout << "following are revies of the customers " << endl;
+
+	for (int i = 0; i < x; i++)
+	{
+		cout << _customer[i].getreviews() << endl;
+	}
+	
+}
+
