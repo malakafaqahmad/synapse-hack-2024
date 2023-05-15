@@ -486,3 +486,110 @@ void _beavrages() {
 
 	
 
+}
+
+
+void _lunch() {
+	char s;
+
+
+
+	static int indexNumber = 0;
+	do {
+
+		string name, description;
+		int price;
+
+
+
+		cout << "Enter the name of the lunch: ";
+		cin >> name;
+		cout << "Enter the price: ";
+		cin >> price;
+		cin.ignore(); // ignore the newline character left in the input stream by cin
+
+		cout << "Enter the description: ";
+		getline(cin, description);
+
+		if (indexNumber < MAX_LUNCH)
+		{
+			ptr[indexNumber] = &lunchItem[indexNumber];
+
+
+			ptr[indexNumber]->setName(name);
+			ptr[indexNumber]->setprice(price);
+			ptr[indexNumber]->setDescription(description);
+
+			indexNumber++;
+		}
+		else {
+			cout << "Max limit reached for lunch!!! " << endl;
+		}
+
+
+
+
+		cout << "Do you want to add more? (y/n) ";
+		cin >> s;
+		cin.ignore(); // ignore the newline character left in the input stream by cin
+	} while (s == 'y' || s == 'Y');
+
+
+	cout << "All the available luches are: " << endl;
+	for (int i = 0; i < indexNumber; i++) {
+			
+		cout << "item: " << i + 1 << endl;
+		ptr[i]=&lunchItem[i];
+
+		ptr[i]->getinformation();
+
+		
+	}
+
+}
+
+
+void _dinner() {
+
+	char s;
+
+
+	static int indexNumber = 0;
+	do {
+
+		string name, description;
+		int price;
+
+
+
+		cout << "Enter the name of the dinner: ";
+		cin >> name;
+		cout << "Enter the price: ";
+		cin >> price;
+		cin.ignore(); // ignore the newline character left in the input stream by cin
+
+		cout << "Enter the description: ";
+		getline(cin, description);
+
+		if (indexNumber < MAX_DINNER)
+		{
+			ptr[indexNumber] = &dinnerItem[indexNumber];
+
+
+			ptr[indexNumber]->setName(name);
+			ptr[indexNumber]->setprice(price);
+			ptr[indexNumber]->setDescription(description);
+
+			indexNumber++;
+		}
+		else {
+			cout << "Max limit reached for dinner!!! " << endl;
+		}
+
+
+
+
+		cout << "Do you want to add more? (y/n) ";
+		cin >> s;
+		cin.ignore(); // ignore the newline character left in the input stream by cin
+	} while (s == 'y' || s == 'Y');
