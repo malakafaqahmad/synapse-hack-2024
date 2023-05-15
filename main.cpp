@@ -989,5 +989,119 @@ void Admin_loggedIN() {
 		break;
 	}
 }
+struct address
+{
+    string city;
+    string homenum;
+};
+class restaurant 
+{
+public:
+     restaurant(){
+        cout<<"welcome to our resturant \n";
+     }
+    string name;
+    address a;
+    address a1;
+    // string name;
+    virtual void display()
+    {
+        cout << "1.Menu \n2.Exit \n";
+        cout << "Enter number to select any one of the above \n";
+    }
+    virtual void showbill() {}
+    void personinform()
+    {
+        system("cls");
+        cout << "Enter Your Name \n";
+        cin >> name;
+        cout << "Enter Your City \n";
+        cin >> a1.city;
+        cout << "Enter House Number \n";
+        cin >> a1.homenum;
+      
+    }
+};
+class menu : public restaurant{
+public:
+    int n1, n2;
+    double total;
+    char ch;
+    static int order;
+    void display()
+   {
+    do
+    {
+        cout << "1. Barb Q\n2. Fish\n3. ice cream\n";
+        cout << "Enter number to select any one of the above \n";
+        cin >> n1;
+        system("cls");
+            if (n1 == 1)
+            {
+                cout << "Which dish would you want to try?\n";
+                cout << "1) Chicken Behari Boti\t\tRs.500\n2) Chicken Malai Boti\t\tRs.600\n3) Chicken Tikka\t\tRs.200\n";
+
+                cout << "Enter number to select any one of the above \n";
+                cin >> n2;
+                if (n2 == 1)
+                {
+                   //       cout << "\n\t\tChicken Behari Boti \t\t\n";
+                    total += 500;
+                    order ++;
+                }
+                else if (n2 == 2)
+                {
+                     //cout << " \n\t\tChicken Malai Boti\t\t\n";
+                    total += 600;
+                    order ++;
+                }
+                else
+                {
+                    total += 200;
+                    order ++;
+                }
+            }
+            else if (n1 == 2)
+            {
+                cout << "1) Finger Fish\t\tRs.450\n2) Grilled Fish\t\tRs.550";
+                cout << "Enter number to select any one of the above \n";
+                cin >> n2;
+                if (n2 == 1)
+                {
+                    total += 450;
+                    order ++;
+                }
+                else
+                {
+                    total += 550;
+                    order ++;
+                }
+            }
+            else if (n1 == 3)
+            {
+                cout << "1) Mango \t\tRs.150\n2) Strawberry \t\tRs.150";
+                cout << "Enter number to select any one of the above \n";
+                cin >> n2;
+                if (n2 == 1)
+                {
+                    total += 150;
+                     order ++;
+
+                }
+                else
+                {
+                    total += 150;
+                     order ++;
+                }
+            }
+            else
+            {
+                cout << "Please select the correct one \n";
+            }
+            cout << "do want ta make change y/n\n";
+            cin >> ch;
+            system("cls");
+     }  while (ch == 'y' || ch == 'Y');   
+   }
 
 
