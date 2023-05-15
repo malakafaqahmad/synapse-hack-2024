@@ -808,4 +808,43 @@ dessert dz_serves;
 		
 		}
 	
+}void setsallary() {
+	// employee employ;
+	int sallary;
+	int howMany;
+	cout << "how many employees you wannt to set sallary" << endl;
+	cin >> howMany;
+	for(int i=0 ; i<howMany ; i++){
+	cout << "enter sallary ";
+	cin >> sallary;
+
+	cin.ignore();
+	employ[i].setsallary(sallary);
+
+	}
+
 }
+
+void updateSallary() {
+	// employee employ;
+	string name;
+	int sallary;
+	int x = employee::count;
+		cout << "enter the name of the employee to update sallary " << endl;
+		cin >> name;
+
+	for(int i=0 ; i < x; i++ ){
+		if(employ[i].name == name){
+			cout << employ[i].getsallary();
+			cout << "enter his sallary" << endl;
+			cin >> sallary;
+			employ[i].setsallary(sallary);
+		}
+		else{
+			cout << "not found " << endl;
+		}
+	}
+	
+}
+
+
