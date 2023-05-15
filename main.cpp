@@ -848,3 +848,75 @@ void updateSallary() {
 }
 
 
+
+void adminDisplay() {
+	int choice=1;
+
+while(choice!=-1){
+	system("color 2");
+	cout << "-----------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
+	cout << "           welcome to admin panel" << endl;
+	cout << "           Sir, what are you looking after" << endl << endl;
+	cout << "           ||       1_ update menu" << endl;
+	cout << "           ||       2_ inform an employee" << endl;
+	cout << "           ||       3_ update employees' salary" << endl;
+	cout << "           ||       4_ set sallary of employee" << endl;
+	cout << "           ||       5_ update inventory" << endl;
+	cout << "           ||       6_ view analytics" << endl;
+	cout << "           ||       7_ view Customer Reports and Reviews" << endl;
+	cout << "           ||       8_ go back" << endl;
+	cout << "           ||       -1 exit the programne" << endl;
+	cout << "-----------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
+	int choice;
+	cin >> choice;
+
+	switch (choice)
+	{
+	case 1:
+		_menu();
+		break;
+
+	case 2:
+		messageEmployee();
+		break;
+
+	case 3:
+		updateSallary();
+		break;
+
+	case 4:
+		setsallary();
+		break;
+
+	case 5:
+		updateInventory();
+		break;
+
+	case 6:
+		//customerDisplay();
+		break;
+
+	case 7:
+		showCostumerRewview();
+		break;
+
+	case 8:
+		loginform();
+		break;
+
+	case -1:
+		exit(0);
+		break;
+
+	default:
+	cout << "please enter a valid option" << endl;
+		break;
+	}
+}
+
+}
+
+
+
