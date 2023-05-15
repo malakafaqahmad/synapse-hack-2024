@@ -735,4 +735,77 @@ void showCostumerRewview(){
 	}
 	
 }
+void updateInventory(){
+	int choice = 1;
+	while(choice !=-1){
 
+breakFast b_serves;
+lunch l_serves;
+dinner d_serves;
+beverage be_serves;
+dessert dz_serves;
+
+		cout << "----------------------------------------------------------------" << endl;
+		cout << "----------------------------------------------------------------" << endl;
+		cout <<"what do you want to update?" << endl;
+
+		cout << "1_ breakfast" << endl;
+		cout << "2_ lunch" << endl;
+		cout << "3_ dinner" << endl;
+		cout << "4_ beavrages" << endl;
+		cout << "5_ desserts" << endl;
+
+		cout << "----------------------------------------------------------------" << endl;
+		cout << "----------------------------------------------------------------" << endl;
+
+		cout << "enter your choice: " ;
+		cin >> choice;
+
+
+
+
+		switch(choice){
+
+			case 1:
+				int Quantity;
+				cout << "Quantity you want to add: " ;
+				cin >> Quantity;
+				b_serves.quantity = Quantity;
+
+			break;
+			
+			case 2:
+			int q;
+				cout << "Quantity you want to add: " ;
+				cin >> q;
+				l_serves.quantity = q;
+			break;
+
+			case 3:
+			int w;
+				cout << "Quantity you want to add: " ;
+				cin >> w;
+				d_serves.quantity = w;
+			break;
+
+			case 4:
+			int e;
+				cout << "Quantity you want to add: " ;
+				cin >> e;
+				be_serves.quantity = e;
+			break;
+
+			case 5:
+			int r;
+				cout << "Quantity you want to add: " ;
+				cin >> r;
+				dz_serves.quantity = r;
+			break;
+
+
+		}
+		
+		
+		}
+	
+}
