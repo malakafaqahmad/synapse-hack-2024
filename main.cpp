@@ -1500,3 +1500,85 @@ void showm(){
 
 
 }
+void loginform() {
+	system("color 3");
+	cout << "-----------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
+
+	cout << "     select one from the following " << endl;
+	cout << "           ||   1_ Admin " << endl;
+	cout << "           ||   2_ Employee " << endl;
+	cout << "           ||   3_customer " << endl;
+	cout << "           ||   4_ exit programme" << endl;
+
+	cout << "-----------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------" << endl;
+	
+	int choice;
+	cout << endl;
+	cout << "iafqahmad>>> ";
+	cin >> choice;
+	system("cls");
+
+
+
+    switch (choice)
+	{
+	case 1:
+		Admin_loggedIN();   //admin.h
+		break;
+	case 2:
+	showm();/////////////////////////////////////////////////////
+		break;
+            //employeeDisplay();
+             
+	case 3:
+		restaurant *ptr;
+        
+            ptr = new menu;
+           ptr->display();
+            ptr->personinform();
+    
+            ptr->showbill();		
+		break;
+
+	case 4:
+		exit(0);
+		break;
+
+    default:
+		break;
+
+    }
+}
+
+
+int main() {
+
+	//Group group("mahnoor", "yasir", "afaq", "2022660", "2022624", "2022672", "A", "restaurant management system", "Qasim Riaz", "Tuesday, 8 april,2023", "3 members");
+	// group.displayInformation();
+
+	// customer _customer[3];
+
+	_customer[0].setreviews(5);
+	_customer[1].setreviews(4);
+	_customer[2].setreviews(2);
+
+
+	employ[0].name="hello world";
+	employ[1].name="noname";
+
+
+
+
+	loginform();       //present on Login.h
+
+
+
+
+
+
+
+
+	return 0;
+}
