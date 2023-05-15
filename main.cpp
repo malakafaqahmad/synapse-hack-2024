@@ -920,3 +920,28 @@ while(choice!=-1){
 
 
 
+void setAdmin(enum Admins loggedInAdmin_name) {
+	Admin admin;
+	admin.name = loggedInAdmin_name;
+	system("cls");
+	cout << "-----------------------------------------------------------------------------" << endl;
+	cout << "-----------------------------------------------------------------------------" << endl;
+	if (loggedInAdmin_name == 1) {
+		adminis_Afaq = true;
+        admin.name ="Afaq";
+		cout << "you are logged in as Malak Afaq" << endl;
+        cout <<admin.name << endl;
+	}
+    
+	else if(loggedInAdmin_name==2) {
+		adminis_Rameesa = true;
+        admin.name ="Rameesa";
+		cout << "you are logged in as Rameesa" << endl;
+        cout <<admin.name << endl;
+
+	}
+
+	adminDisplay();
+}
+
+
